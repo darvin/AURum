@@ -7,6 +7,7 @@
 
 import UIKit
 import SwiftUI
+import ARKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
+        
+        
+        guard ARWorldTrackingConfiguration.supportsUserFaceTracking else {
+            fatalError("This sample code requires iOS 13 / iPad OS 13, and an iOS device with a front TrueDepth camera. Note: 2020 iPads do not support user face-tracking while world tracking.")
+        }
+        
         // Create the SwiftUI view that provides the window contents.
         let contentView = ContentView()
 

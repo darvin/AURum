@@ -15,6 +15,9 @@
 		9A7064D529AA1E7B0049E29B /* AURumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7064D429AA1E7B0049E29B /* AURumTests.swift */; };
 		9A7064DF29AA1E7B0049E29B /* AURumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7064DE29AA1E7B0049E29B /* AURumUITests.swift */; };
 		9A7064E129AA1E7B0049E29B /* AURumUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7064E029AA1E7B0049E29B /* AURumUITestsLaunchTests.swift */; };
+		9A7064F029AA20A50049E29B /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7064EF29AA20A50049E29B /* ARViewContainer.swift */; };
+		9A7064F429AA22580049E29B /* ARView+ARCoachingOverlayViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7064F329AA22580049E29B /* ARView+ARCoachingOverlayViewDelegate.swift */; };
+		9A7064F629AA24A20049E29B /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7064F529AA24A20049E29B /* ARViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,9 @@
 		9A7064DA29AA1E7B0049E29B /* AURumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AURumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7064DE29AA1E7B0049E29B /* AURumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AURumUITests.swift; sourceTree = "<group>"; };
 		9A7064E029AA1E7B0049E29B /* AURumUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AURumUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9A7064EF29AA20A50049E29B /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
+		9A7064F329AA22580049E29B /* ARView+ARCoachingOverlayViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARView+ARCoachingOverlayViewDelegate.swift"; sourceTree = "<group>"; };
+		9A7064F529AA24A20049E29B /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,9 @@
 				9A7064C529AA1E790049E29B /* Experience.rcproject */,
 				9A7064C729AA1E7B0049E29B /* Assets.xcassets */,
 				9A7064C929AA1E7B0049E29B /* Preview Content */,
+				9A7064EF29AA20A50049E29B /* ARViewContainer.swift */,
+				9A7064F329AA22580049E29B /* ARView+ARCoachingOverlayViewDelegate.swift */,
+				9A7064F529AA24A20049E29B /* ARViewController.swift */,
 			);
 			path = AURum;
 			sourceTree = "<group>";
@@ -263,6 +272,9 @@
 				9A7064C429AA1E790049E29B /* ContentView.swift in Sources */,
 				9A7064C229AA1E790049E29B /* AppDelegate.swift in Sources */,
 				9A7064C629AA1E790049E29B /* Experience.rcproject in Sources */,
+				9A7064F629AA24A20049E29B /* ARViewController.swift in Sources */,
+				9A7064F429AA22580049E29B /* ARView+ARCoachingOverlayViewDelegate.swift in Sources */,
+				9A7064F029AA20A50049E29B /* ARViewContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
