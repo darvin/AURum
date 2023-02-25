@@ -12,7 +12,34 @@ import RealityKit
 
 class ARViewController: UIViewController {
     var arView: ARView!
-    
+    func makeHandPoseRequest() -> VNDetectHumanHandPoseRequest {
+        let r = VNDetectHumanHandPoseRequest { request, error in
+            guard error == nil else {
+                print("Hand pose recogntion error: \(error!)")
+                return
+            }
+            guard let handPoses = request.results as? [VNHumanHandPoseObservation], !handPoses.isEmpty else {
+                // No effects to draw, so clear out current graphics
+                return
+            }
+            
+            for hand in handPoses {
+                let jointNames = hand.availableJointNames.filter {
+                    [.thumbTip, .indexTip, .middleTip, .ringTip, .littleTip].contains($0)
+                }
+                let groupNames = hand.availableJointsGroupNames
+                let joints = jointNames.map { try! hand.recognizedPoint($0) }
+                let groups = groupNames.map { try! hand.recognizedPoints($0) }
+                print("HAND: \(joints)   ")
+            }
+
+        }
+        r.maximumHandCount = 2
+        r.revision = VNDetectHumanHandPoseRequestRevision1
+        
+        return r
+    }
+
     lazy var configuration: ARConfiguration = {
         let configuration = ARFaceTrackingConfiguration()
         
@@ -64,6 +91,7 @@ class ARViewController: UIViewController {
         // Prevent the screen from being dimmed to avoid interuppting the AR experience.
         UIApplication.shared.isIdleTimerDisabled = true
 
+        arView.session.delegate = self
         
         
         let boxAnchor = try! Experience.loadBox()
@@ -99,6 +127,17 @@ extension ARViewController:  ARSessionDelegate {
     /// and the tracking state is 'normal'.
     /// - Tag: AddHeadPreview
     func session(_ session: ARSession, didUpdate frame: ARFrame) {
+        
+        let pixelBuffer = frame.capturedImage
+        let handPoseRequest = makeHandPoseRequest()
+
+        let handler = VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:])
+        do {
+            try handler.perform([handPoseRequest])
+        } catch {
+            assertionFailure("Human Pose Request failed: \(error)")
+        }
+
 //        if headPreview == nil, case .normal = frame.camera.trackingState {
 //            addHeadPreview()
 //        }
