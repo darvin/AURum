@@ -9,10 +9,15 @@ import SwiftUI
 import RealityKit
 import ARKit
 
+let backgroundGrayLevel = 1.0
 struct ContentView : View {
     var body: some View {
         ZStack {
-            ARViewContainer()
+            Color(uiColor: UIColor(red: backgroundGrayLevel, green: backgroundGrayLevel, blue: backgroundGrayLevel, alpha: 1.0))
+            ARViewContainer().opacity(1)
+//                .saturation(0.9)
+                .blendMode(.colorBurn)
+            Color.white.blendMode(.exclusion)
             TrackListView()
                 .padding(30)
         }

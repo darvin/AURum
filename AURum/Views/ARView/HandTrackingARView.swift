@@ -74,7 +74,7 @@ class HandTrackingARView: ARView {
                 .littleTip].contains($0)
         })).forEach { color, joint in
             for handTracker in handTrackers {
-                let sphere = Entity.makeSphere(color: color, radius: 0.0037, isMetallic: false)
+                let sphere = Entity.makeSphere(color: color, radius: 0.0037, isMetallic: true)
 
                 handTracker.attach(thisEnt: sphere, toThisJoint: joint)
 
