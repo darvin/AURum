@@ -11,7 +11,12 @@ import ARKit
 
 struct ContentView : View {
     var body: some View {
-        ARViewContainer().edgesIgnoringSafeArea(.all)
+        ZStack {
+            ARViewContainer()
+            TrackListView()
+                .padding(30)
+        }
+            .edgesIgnoringSafeArea(.all)
             .persistentSystemOverlays(.hidden)
 
     }

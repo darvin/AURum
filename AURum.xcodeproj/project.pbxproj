@@ -20,6 +20,15 @@
 		9A7064F629AA24A20049E29B /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7064F529AA24A20049E29B /* ARViewController.swift */; };
 		9A7064FB29AA38150049E29B /* HandTrackingARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7064FA29AA38150049E29B /* HandTrackingARView.swift */; };
 		9A70650029AA423F0049E29B /* BodyTracking in Frameworks */ = {isa = PBXBuildFile; productRef = 9A7064FF29AA423F0049E29B /* BodyTracking */; };
+		9A70650229AA68A00049E29B /* TrackListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A70650129AA68A00049E29B /* TrackListView.swift */; };
+		9A70650829AA69760049E29B /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A70650729AA69760049E29B /* Track.swift */; };
+		9A70650A29AA69C60049E29B /* TrackUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A70650929AA69C60049E29B /* TrackUnit.swift */; };
+		9A70650C29AA6AD80049E29B /* TrackListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A70650B29AA6AD80049E29B /* TrackListViewModel.swift */; };
+		9A70650E29AA6B880049E29B /* TrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A70650D29AA6B880049E29B /* TrackView.swift */; };
+		9A70651029AA6C1A0049E29B /* TrackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A70650F29AA6C1A0049E29B /* TrackViewModel.swift */; };
+		9A70651229AA6E4F0049E29B /* VerticalSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A70651129AA6E4F0049E29B /* VerticalSlider.swift */; };
+		9A70651429AA752D0049E29B /* AddNewTrackUnitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A70651329AA752D0049E29B /* AddNewTrackUnitViewModel.swift */; };
+		9A70651629AA75770049E29B /* AddNewTrackUnitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A70651529AA75770049E29B /* AddNewTrackUnitView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +64,15 @@
 		9A7064F329AA22580049E29B /* ARView+ARCoachingOverlayViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARView+ARCoachingOverlayViewDelegate.swift"; sourceTree = "<group>"; };
 		9A7064F529AA24A20049E29B /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		9A7064FA29AA38150049E29B /* HandTrackingARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandTrackingARView.swift; sourceTree = "<group>"; };
+		9A70650129AA68A00049E29B /* TrackListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListView.swift; sourceTree = "<group>"; };
+		9A70650729AA69760049E29B /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		9A70650929AA69C60049E29B /* TrackUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackUnit.swift; sourceTree = "<group>"; };
+		9A70650B29AA6AD80049E29B /* TrackListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackListViewModel.swift; sourceTree = "<group>"; };
+		9A70650D29AA6B880049E29B /* TrackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackView.swift; sourceTree = "<group>"; };
+		9A70650F29AA6C1A0049E29B /* TrackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackViewModel.swift; sourceTree = "<group>"; };
+		9A70651129AA6E4F0049E29B /* VerticalSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalSlider.swift; sourceTree = "<group>"; };
+		9A70651329AA752D0049E29B /* AddNewTrackUnitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewTrackUnitViewModel.swift; sourceTree = "<group>"; };
+		9A70651529AA75770049E29B /* AddNewTrackUnitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewTrackUnitView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,15 +124,13 @@
 		9A7064C029AA1E790049E29B /* AURum */ = {
 			isa = PBXGroup;
 			children = (
+				9A70650529AA69000049E29B /* Models */,
+				9A70650429AA68F60049E29B /* ViewModels */,
+				9A70650329AA68F00049E29B /* Views */,
 				9A7064C129AA1E790049E29B /* AppDelegate.swift */,
-				9A7064C329AA1E790049E29B /* ContentView.swift */,
 				9A7064C529AA1E790049E29B /* Experience.rcproject */,
 				9A7064C729AA1E7B0049E29B /* Assets.xcassets */,
 				9A7064C929AA1E7B0049E29B /* Preview Content */,
-				9A7064EF29AA20A50049E29B /* ARViewContainer.swift */,
-				9A7064F329AA22580049E29B /* ARView+ARCoachingOverlayViewDelegate.swift */,
-				9A7064F529AA24A20049E29B /* ARViewController.swift */,
-				9A7064FA29AA38150049E29B /* HandTrackingARView.swift */,
 			);
 			path = AURum;
 			sourceTree = "<group>";
@@ -142,6 +158,49 @@
 				9A7064E029AA1E7B0049E29B /* AURumUITestsLaunchTests.swift */,
 			);
 			path = AURumUITests;
+			sourceTree = "<group>";
+		};
+		9A70650329AA68F00049E29B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9A70650129AA68A00049E29B /* TrackListView.swift */,
+				9A70651529AA75770049E29B /* AddNewTrackUnitView.swift */,
+				9A70650D29AA6B880049E29B /* TrackView.swift */,
+				9A7064C329AA1E790049E29B /* ContentView.swift */,
+				9A70650629AA69090049E29B /* ARView */,
+				9A70651129AA6E4F0049E29B /* VerticalSlider.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9A70650429AA68F60049E29B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9A70650B29AA6AD80049E29B /* TrackListViewModel.swift */,
+				9A70650F29AA6C1A0049E29B /* TrackViewModel.swift */,
+				9A70651329AA752D0049E29B /* AddNewTrackUnitViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		9A70650529AA69000049E29B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9A70650729AA69760049E29B /* Track.swift */,
+				9A70650929AA69C60049E29B /* TrackUnit.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9A70650629AA69090049E29B /* ARView */ = {
+			isa = PBXGroup;
+			children = (
+				9A7064FA29AA38150049E29B /* HandTrackingARView.swift */,
+				9A7064EF29AA20A50049E29B /* ARViewContainer.swift */,
+				9A7064F329AA22580049E29B /* ARView+ARCoachingOverlayViewDelegate.swift */,
+				9A7064F529AA24A20049E29B /* ARViewController.swift */,
+			);
+			path = ARView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,10 +341,19 @@
 			files = (
 				9A7064C429AA1E790049E29B /* ContentView.swift in Sources */,
 				9A7064C229AA1E790049E29B /* AppDelegate.swift in Sources */,
+				9A70651029AA6C1A0049E29B /* TrackViewModel.swift in Sources */,
+				9A70650229AA68A00049E29B /* TrackListView.swift in Sources */,
+				9A70650A29AA69C60049E29B /* TrackUnit.swift in Sources */,
+				9A70651429AA752D0049E29B /* AddNewTrackUnitViewModel.swift in Sources */,
 				9A7064FB29AA38150049E29B /* HandTrackingARView.swift in Sources */,
+				9A70651629AA75770049E29B /* AddNewTrackUnitView.swift in Sources */,
 				9A7064C629AA1E790049E29B /* Experience.rcproject in Sources */,
+				9A70650829AA69760049E29B /* Track.swift in Sources */,
+				9A70651229AA6E4F0049E29B /* VerticalSlider.swift in Sources */,
 				9A7064F629AA24A20049E29B /* ARViewController.swift in Sources */,
+				9A70650C29AA6AD80049E29B /* TrackListViewModel.swift in Sources */,
 				9A7064F429AA22580049E29B /* ARView+ARCoachingOverlayViewDelegate.swift in Sources */,
+				9A70650E29AA6B880049E29B /* TrackView.swift in Sources */,
 				9A7064F029AA20A50049E29B /* ARViewContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
