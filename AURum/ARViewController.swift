@@ -11,7 +11,9 @@ import ARKit
 import RealityKit
 
 class ARViewController: UIViewController {
-    var arView: ARView!
+    var arView: HandTrackingARView!
+
+    /*
     func makeHandPoseRequest() -> VNDetectHumanHandPoseRequest {
         let r = VNDetectHumanHandPoseRequest { request, error in
             guard error == nil else {
@@ -51,17 +53,17 @@ class ARViewController: UIViewController {
 
         return configuration
     }()
-    
+    */
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
 
-        guard ARWorldTrackingConfiguration.supportsUserFaceTracking else {
-            fatalError("This sample code requires iOS 13 / iPad OS 13, and an iOS device with a front TrueDepth camera. Note: 2020 iPads do not support user face-tracking while world tracking.")
-        }
-        arView = ARView(frame: .zero)
+//        guard ARWorldTrackingConfiguration.supportsUserFaceTracking else {
+//            fatalError("This sample code requires iOS 13 / iPad OS 13, and an iOS device with a front TrueDepth camera. Note: 2020 iPads do not support user face-tracking while world tracking.")
+//        }
+        arView = HandTrackingARView(frame: .zero)
         
         
         
@@ -76,11 +78,9 @@ class ARViewController: UIViewController {
             view.bottomAnchor.constraint(equalTo: arView.bottomAnchor)
         ])
 
-
-//        arView.session.delegate = self
         
         // We want to run a custom configuration.
-        arView.automaticallyConfigureSession = false
+//        arView.automaticallyConfigureSession = false
         
         #if !targetEnvironment(simulator)
         arView.addCoaching()
@@ -91,7 +91,7 @@ class ARViewController: UIViewController {
         // Prevent the screen from being dimmed to avoid interuppting the AR experience.
         UIApplication.shared.isIdleTimerDisabled = true
 
-        arView.session.delegate = self
+//        arView.session.delegate = self
         
         
         let boxAnchor = try! Experience.loadBox()
@@ -102,7 +102,7 @@ class ARViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        arView.session.run(configuration)
+//        arView.session.run(configuration)
         setNeedsStatusBarAppearanceUpdate()
     }
     
@@ -127,7 +127,7 @@ extension ARViewController:  ARSessionDelegate {
     /// and the tracking state is 'normal'.
     /// - Tag: AddHeadPreview
     func session(_ session: ARSession, didUpdate frame: ARFrame) {
-        
+        /*
         let pixelBuffer = frame.capturedImage
         let handPoseRequest = makeHandPoseRequest()
 
@@ -148,6 +148,7 @@ extension ARViewController:  ARSessionDelegate {
 //        // Update the head's appearance to reflect whether the user's face is tracked
 //        // or the floating head intersects with already anchored heads.
 //        updateHeadPreviewAppearance(for: frame)
+         */
     }
     
     /// If there is a floating robot head, update its model
